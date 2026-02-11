@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="test-data-1" author="sander">
+        <insert tableName="coupon">
+            <column name="code" value="DISCOUNT10"/>
+            <column name="discount" valueNumeric="0.1"/>
+        </insert>
+        <insert tableName="category">
+            <column name="name" value="Electronics"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="name" value="John Doe"/>
+            <column name="username" value="johndoe"/>
+            <column name="email" value="johndoe@gmail.com"/>
+            <column name="password" value="$2a$10$tLBXAMzifxammw9moaGYnOLjITgNtwRukssUrmnsGn9LUj8jpzLgi"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="name" value="Test User"/>
+            <column name="username" value="testuser"/>
+            <column name="email" value="s@gmail.com"/>
+            <column name="password" value="password123"/>
+        </insert>
+        <insert tableName="orders">
+            <column name="customer_id" valueNumeric="1"/>
+            <column name="total_price" valueNumeric="100.00"/>
+            <column name="coupon_id" valueNumeric="1"/>
+            <column name="created_at" valueDate="2024-01-01T10:00:00"/>
+        </insert>
+        <insert tableName="shop_item">
+            <column name="name" value="Sample Item"/>
+            <column name="description" value="This is a sample item."/>
+            <column name="price" valueNumeric="50.00"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="product_url" value="http://example.com/sample-item"/>
+        </insert>
+        <insert tableName="review">
+            <column name="customer_id" valueNumeric="1"/>
+            <column name="shop_item_id" valueNumeric="1"/>
+            <column name="rating" valueNumeric="5"/>
+            <column name="comment" value="Great product!"/>
+            <column name="created_at" valueDate="2024-01-01T10:00:00"/>
+        </insert>
+        <insert tableName="cart_item">
+            <column name="user_id" valueNumeric="2"/>
+            <column name="shop_item_id" valueNumeric="1"/>
+            <column name="quantity" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="order_item">
+            <column name="order_id" valueNumeric="1"/>
+            <column name="shop_item_id" valueNumeric="1"/>
+            <column name="name_snapshot" value="Sample Item"/>
+            <column name="category_snapshot" value="Electronics"/>
+            <column name="unit_price" valueNumeric="50.00"/>
+            <column name="quantity" valueNumeric="2"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

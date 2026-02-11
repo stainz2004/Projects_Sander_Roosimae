@@ -1,5 +1,7 @@
-# README
+# Projects Portfolio
 
+Welcome to my projects repository! This is a collection of some of my school projects across different courses and technologies. 
 
-Welcome to my repository! This GitHub contains a collection of most of my school projects. Feel free to explore and I hope you find something interesting!
+Each project is self-contained and includes its own README with setup steps and usage notes.
 
+[LinkedIn Profile](https://www.linkedin.com/in/your-handle/)

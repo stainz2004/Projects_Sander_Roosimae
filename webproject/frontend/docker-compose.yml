@@ -1,0 +1,13 @@
+services:
+  frontend:
+    image: sandro321/veebilehekala-frontend:latest
+    container_name: veebilehekala-frontend
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    networks:
+      - backend_default
+
+networks:
+  backend_default:
+    external: true
