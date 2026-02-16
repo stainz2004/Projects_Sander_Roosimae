@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="js/loadNavbar.js" defer></script>
+    <script src="js/info.js" defer></script>
+    <script type="module" src="js/logout.js" defer></script>
+    <script src="js/change.js" defer></script>
+    <title>Profile</title>
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+    <main>
+        <div class="info">
+            <h1 style="margin-bottom: 3rem;">Account details</h1>
+            <!-- The input field where the email will be displayed -->
+            <label for="email" style="padding: none; margin: none; font-size: 1.5rem;"> Email:</label>
+            <input type="text" id="emailInput" readonly>
+            <br>
+            <br>
+            <input type="button" id="LogoutButton" value="Log out" class="logout">
+        </div>
+    </main>
+    <script src="js/change.js"></script>
+
+</body>
+</html>

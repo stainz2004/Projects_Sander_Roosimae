@@ -1,0 +1,155 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Style */
+nav {
+    display: flex; /* Ensure the navbar is visible */
+    justify-content: space-evenly; /* Evenly space buttons */
+    align-items: center;
+    width: 100%;
+    background-color: #ff5555;
+    padding: 16px 0;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a, .nav-item {
+    color: #ffffff;
+    font-family: 'Jockey One', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+
+    font-size: 1.4em;
+    flex-shrink: 1;
+    min-width: 30px;
+    padding: 8px 16px; /* Add padding for clickable space */
+    margin: 0 10px; /* Add spacing between buttons */
+}
+
+nav a img, .nav-icon {
+    vertical-align: middle;
+    height: 40px;
+    margin-right: 10px;
+    fill: #000000;
+}
+
+nav a:hover, .nav-item:hover {
+    background-color: #ffd700;
+    color: #1e1e1e;
+}
+
+nav a.active, .nav-item.active {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* Mobile-Specific */
+.mobile-nav {
+    display: none;
+    height: 36px;
+    flex-direction: row;
+    justify-content: space-evenly; /* Evenly distribute buttons */
+    align-items: center;
+    padding: 4px;
+    transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 20px;
+    padding: 4px 8px;
+    font-size: 1em;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-text {
+    display: none;
+}
+
+/* Desktop-Specific */
+@media (min-width: 769px) {
+    nav {
+        justify-content: center; /* Center all buttons */
+        padding: 12px 0;
+    }
+
+    nav a {
+        margin: 0 8px; /* Add spacing between buttons */
+        padding: 8px 8px; /* Adjust padding for visual balance */
+    }
+
+    .nav-icon {
+        width: 24px; /* Adjust icon size for desktop */
+        height: 24px;
+        margin-right: 8px; /* Spacing between icon and text */
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: flex;
+        justify-content: space-evenly; /* Evenly distribute buttons */
+        align-items: center;          /* Center vertically */
+        padding: 8px 0;               /* Minimal padding for aesthetics */
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-color: #ff5555;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .mobile-nav a {
+        display: flex;
+        flex-direction: column; /* Icons above text */
+        justify-content: center;
+        align-items: center;
+        margin: 0;              /* Remove margins */
+        padding: 4px;           /* Add small padding */
+        text-align: center;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .nav-icon {
+        width: 24px;   /* Ensure consistent icon size */
+        height: 24px;
+        margin-bottom: 4px; /* Small gap between icon and text */
+    }
+
+    .nav-text {
+        font-size: 0.7rem; /* Adjust text size for readability */
+    }
+}
+
+/* Smallest Screen Adjustments */
+@media (max-width: 420px) {
+    .mobile-nav {
+        padding: 4px 0; /* Reduce padding for smaller screens */
+    }
+
+    .nav-icon {
+        width: 20px; /* Adjust size for very small devices */
+        height: 20px;
+    }
+
+    .nav-text {
+        font-size: 0.6rem; /* Smaller text size */
+    }
+}

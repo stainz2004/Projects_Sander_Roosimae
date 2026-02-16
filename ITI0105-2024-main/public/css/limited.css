@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    background-color: #e6d0d0;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 2%;
+  }
+main{
+    margin: 0.1rem;
+}
+
+h1, h2, h3, h5 {
+    text-align: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white, -1px -1px 2px gray;
+    line-height: 160%;
+    letter-spacing: 0.2em;
+}
+
+h1 {
+    color: var(--Colors-Red, #f91b0f);
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-style: normal;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white, -1px -1px 2px gray;
+    line-height: 160%;
+    letter-spacing: 14.72px;
+    text-decoration-line: underline;
+}
+
+h2 {
+    color: #FFD700;
+    text-shadow: 1px 1px 2px white, -1px -1px 2px gray;
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    letter-spacing: 20.4px;
+}
+
+h3 {
+    color: var(--Colors-Red, #ff2c20);
+    text-shadow: 1px 1px 2px white, -1px -1px 2px gray;
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    letter-spacing: 22.08px;
+}
+
+h5 {
+    color: var(--Grays-Black, #000);
+    font-family: "Baloo 2";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.circle-container {
+    width: clamp(20rem, 35vw, 30rem);
+    height: clamp(20rem, 35vw, 30rem);
+    background-color:#ff5c54;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0 auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(255, 116, 116, 0.15);
+    transform: scale(0);
+    opacity: 0;
+    animation: fadeInScale 1s ease forwards; 
+}
+
+.centered-image {
+    width: clamp(15rem, 30vw, 25rem);
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 20%;
+}
