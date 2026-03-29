@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="26.02.2026-seed-1" author="Sander R" runOnChange="true">
+        <insert tableName="seating_type">
+            <column name="type" value="VIP"/>
+        </insert>
+        <insert tableName="seating_type">
+            <column name="type" value="Terrass"/>
+        </insert>
+        <insert tableName="seating_type">
+            <column name="type" value="Sisesaal"/>
+        </insert>
+        <insert tableName="seating_type">
+            <column name="type" value="Rõdu"/>
+        </insert>
+    </changeSet>
+    <changeSet id="26.02.2026-seed-2" author="Sander R" runOnChange="true">
+        <insert tableName="seating_preference">
+            <column name="name" value="Vaikne nurk"/>
+        </insert>
+        <insert tableName="seating_preference">
+            <column name="name" value="Akna all"/>
+        </insert>
+        <insert tableName="seating_preference">
+            <column name="name" value="Ratastooliga ligipääsetav"/>
+        </insert>
+        <insert tableName="seating_preference">
+            <column name="name" value="Pime nurk"/>
+        </insert>
+    </changeSet>
+    <changeSet id="26.02.2026-seed-3" author="Sander R" runOnChange="true">
+        <insert tableName="seating">
+            <column name="name" value="Laud 1"/>
+            <column name="type_id" valueNumeric="1"/>
+            <column name="max_people" valueNumeric="15"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 2"/>
+            <column name="type_id" valueNumeric="2"/>
+            <column name="max_people" valueNumeric="1"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 3"/>
+            <column name="type_id" valueNumeric="3"/>
+            <column name="max_people" valueNumeric="2"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 4"/>
+            <column name="type_id" valueNumeric="4"/>
+            <column name="max_people" valueNumeric="2"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 5"/>
+            <column name="type_id" valueNumeric="1"/>
+            <column name="max_people" valueNumeric="5"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 6"/>
+            <column name="type_id" valueNumeric="2"/>
+            <column name="max_people" valueNumeric="6"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 7"/>
+            <column name="type_id" valueNumeric="3"/>
+            <column name="max_people" valueNumeric="15"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 8"/>
+            <column name="type_id" valueNumeric="4"/>
+            <column name="max_people" valueNumeric="2"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 9"/>
+            <column name="type_id" valueNumeric="1"/>
+            <column name="max_people" valueNumeric="4"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 10"/>
+            <column name="type_id" valueNumeric="2"/>
+            <column name="max_people" valueNumeric="5"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 11"/>
+            <column name="type_id" valueNumeric="3"/>
+            <column name="max_people" valueNumeric="2"/>
+        </insert>
+        <insert tableName="seating">
+            <column name="name" value="Laud 12"/>
+            <column name="type_id" valueNumeric="4"/>
+            <column name="max_people" valueNumeric="20"/>
+        </insert>
+    </changeSet>
+    <changeSet id="26.02.2026-seed-4" author="Sander R" runOnChange="true">
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="1"/>
+            <column name="preference_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="2"/>
+            <column name="preference_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="3"/>
+            <column name="preference_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="4"/>
+            <column name="preference_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="5"/>
+            <column name="preference_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="6"/>
+            <column name="preference_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="7"/>
+            <column name="preference_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="8"/>
+            <column name="preference_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="9"/>
+            <column name="preference_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="10"/>
+            <column name="preference_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="11"/>
+            <column name="preference_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="seating_seating_preference">
+            <column name="seating_id" valueNumeric="12"/>
+            <column name="preference_id" valueNumeric="3"/>
+        </insert>
+    </changeSet>
+    <changeSet id="26.02.2026-seed-5" author="Sander R" runOnChange="true">
+        <delete tableName="reservation"/>
+        <sql>
+            INSERT INTO reservation (seating_id, start_time, end_time)
+            SELECT id, NOW() - INTERVAL '2 minutes', NOW() + INTERVAL '2 hours'
+            FROM seating WHERE name = 'Laud ' || (1 + floor(random() * 12)::int);
+
+            INSERT INTO reservation (seating_id, start_time, end_time)
+            SELECT id, NOW() - INTERVAL '2 minutes', NOW() + INTERVAL '2 hours'
+            FROM seating WHERE name = 'Laud ' || (1 + floor(random() * 12)::int);
+
+            INSERT INTO reservation (seating_id, start_time, end_time)
+            SELECT id, NOW() - INTERVAL '2 minutes', NOW() + INTERVAL '2 hours'
+            FROM seating WHERE name = 'Laud ' || (1 + floor(random() * 12)::int);
+
+            INSERT INTO reservation (seating_id, start_time, end_time)
+            SELECT id, NOW() - INTERVAL '2 minutes', NOW() + INTERVAL '2 hours'
+            FROM seating WHERE name = 'Laud ' || (1 + floor(random() * 12)::int);
+
+            INSERT INTO reservation (seating_id, start_time, end_time)
+            SELECT id, NOW() - INTERVAL '2 minutes' , NOW() + INTERVAL '2 hours'
+            FROM seating WHERE name = 'Laud ' || (1 + floor(random() * 12)::int);
+
+            INSERT INTO reservation (seating_id, start_time, end_time)
+            SELECT id, NOW() - INTERVAL '2 minutes' , NOW() + INTERVAL '2 hours'
+            FROM seating WHERE name = 'Laud ' || (1 + floor(random() * 12)::int);
+
+            INSERT INTO reservation (seating_id, start_time, end_time)
+            SELECT id, NOW() - INTERVAL '2 minutes' , NOW() + INTERVAL '2 hours'
+            FROM seating WHERE name = 'Laud ' || (1 + floor(random() * 12)::int);
+
+            INSERT INTO reservation (seating_id, start_time, end_time)
+            SELECT id, NOW() - INTERVAL '2 minutes' , NOW() + INTERVAL '2 hours'
+            FROM seating WHERE name = 'Laud ' || (1 + floor(random() * 12)::int);
+        </sql>
+    </changeSet>
+
+
+</databaseChangeLog>
