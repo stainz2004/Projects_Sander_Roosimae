@@ -35,14 +35,14 @@ For the backend decision engine I also wrote some tests to make sure that the lo
 
 Open a terminal and run the following commands:
 ```
-cd loan-approval-calculator
+cd loan-calculator
 cd backend
 ./gradlew bootRun
 ```
 
 Open another terminal
 ```
-cd loan-approval-calculator
+cd loan-calculator
 cd frontend
 npm install
 npm run dev
