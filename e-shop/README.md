@@ -51,6 +51,7 @@ The purpose is to learn web development and make Sander's dad a website for his 
 #### 1. Start PostgreSQL Database
 
 ```bash
+cd e-shop
 cd backend
 docker-compose up -d postgres
 ```
@@ -64,6 +65,7 @@ Copy over the .env.example file and fill out with the correct postgres informati
 In your IDE or terminal:
 
 ```bash
+cd e-shop
 cd backend
 ./gradlew bootRun
 ```
@@ -73,6 +75,7 @@ The backend will start on http://localhost:8080
 #### 3. Run Frontend Manually
 
 ```bash
+cd e-shop
 cd frontend
 npm install
 npm run dev
@@ -87,6 +90,7 @@ The frontend will start on http://localhost:5173
 #### Build JAR (Skip Tests)
 
 ```bash
+cd e-shop
 cd backend
 ./gradlew clean build -x test
 ```
@@ -96,6 +100,7 @@ cd backend
 Build the Docker image:
 
 ```bash
+cd e-shop
 cd backend
 docker build -t sandro321/veebilehekala:latest .
 ```
@@ -103,6 +108,7 @@ docker build -t sandro321/veebilehekala:latest .
 ### Build Frontend
 
 ```bash
+cd e-shop
 cd frontend
 npm install
 npm run build
@@ -113,6 +119,7 @@ npm run build
 Build the Docker image:
 
 ```bash
+cd e-shop
 cd frontend
 docker build -t sandro321/veebilehekala-frontend:latest .
 ```
@@ -141,6 +148,7 @@ docker push sandro321/veebilehekala-frontend:latest
 First, build the JAR file, then build the Docker image
 
 ```bash
+cd e-shop
 cd backend
 ./gradlew clean build -x test
 docker build -t sandro321/veebilehekala:latest .
@@ -149,6 +157,7 @@ docker build -t sandro321/veebilehekala:latest .
 #### Frontend Image
 
 ```bash
+cd e-shop
 cd frontend
 docker build -t sandro321/veebilehekala-frontend:latest .
 ```
@@ -156,6 +165,7 @@ docker build -t sandro321/veebilehekala-frontend:latest .
 #### Start Backend Services
 
 ```bash
+cd e-shop
 cd backend
 docker-compose up -d
 ```
@@ -163,6 +173,7 @@ docker-compose up -d
 #### Start Frontend
 
 ```bash
+cd e-shop
 cd frontend
 docker-compose up -d
 ```
